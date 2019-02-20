@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run rizaldirnm/docker-course npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-southeast-1"
+  app: "docker-course"
+  env: "DockerCourse-env"
+  bucket_name: "elasticbeanstalk-ap-southeast-1-883448902251"
+  bucket_path: "docker-course"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
