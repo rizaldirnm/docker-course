@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            apa artinya??
+            From feature branch
           </a>
         </header>
       </div>
